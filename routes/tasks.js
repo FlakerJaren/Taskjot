@@ -30,9 +30,9 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
         _id: req.params.id
     })
         .then(task => {
-            if (task.id != req.user.id) {
+            if (task.user != req.user.id) {
                 req.flash("error_msg", "Not Authorized");
-                req.redirect("/tasks");
+                res.redirect("/tasks");
             }
             else {
                 res.render("tasks/edit", {
