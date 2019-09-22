@@ -1,0 +1,39 @@
+{{#each tasks}}
+<div class="row">
+    <div class="col-6">
+        <div class="card mt-3 tab-card">
+            <div class="card-header tab-card-header bg-light"></div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text mb-2">{{details}}</p>
+                    <hr>
+                    <a href="/tasks/edit/{{id}}" class="btn btn-outline-info btn-block">Edit Task</a>
+
+                    <form action="/tasks/{{id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name = "_method" value = "DELETE">
+                        <input type="submit" class = "btn btn-outline-danger mt-2 btn-block" value = "Delete Task">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+
+
+
+{{!-- {{#each tasks}}
+    <div class="card card-body mt-2">
+        <h4>{{title}}</h4>
+        <p>{{details}}</p>
+        <a href="/tasks/edit/{{id}}" class="btn btn-dark btn-block mb-2">Edit</a>
+        <form method="post" action="/tasks/{{id}}?_method=DELETE"  >
+            <input type="hidden" name ="_method" value = "DELETE">
+            <input type="submit" class = 'btn btn-danger btn-block'value="Delete">
+        </form>
+    </div>
+{{else}}
+    <p>No ideas listed</p>
+{{/each}} --}}

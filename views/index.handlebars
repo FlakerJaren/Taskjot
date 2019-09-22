@@ -1,0 +1,9 @@
+<div class="jumbotron text-center mt-1">
+    <h1 class="display-3">Taskjot</h1>
+    <p class="lead">Jot down tasks</p>
+    {{#if user}}
+    <a href="/tasks/add" class="btn btn-success btn-lg">Add Task</a>
+    {{else}}
+    <a href="/user/register" class="btn btn-primary btn-lg">Sign up</a>
+    {{/if}}
+</div>
