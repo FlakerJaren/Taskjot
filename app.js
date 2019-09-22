@@ -20,10 +20,10 @@ require("./config/passport")(passport)
 var port = process.env.PORT ||5000;
 app.listen(port);
 
-tempURI = "mongodb+srv://user2:user2@taskjot-o4a8p.mongodb.net/test?retryWrites=true&w=majority"
+
 
 //connect to database
-mongoose.connect(tempURI, {useUnifiedTopology:true, useNewUrlParser:true})
+mongoose.connect(db.mongoURI, {useUnifiedTopology:true, useNewUrlParser:true})
     .then(()=>console.log("Mongo DB Connected.."))
     .catch(err=> console.log(err));
 
