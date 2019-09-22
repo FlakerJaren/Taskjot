@@ -20,7 +20,7 @@ require("./config/passport")(passport)
 var port = process.env.PORT ||5000;
 app.listen(port);
 
-tempURI = "mongodb+srv://Jaren:6428Jaren@taskjot-o4a8p.mongodb.net/test?retryWrites=true&w=majority"
+tempURI = "mongodb+srv://user2:user2@taskjot-o4a8p.mongodb.net/test?retryWrites=true&w=majority"
 
 //connect to database
 mongoose.connect(tempURI, {useUnifiedTopology:true, useNewUrlParser:true})
