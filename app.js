@@ -18,9 +18,7 @@ require("./config/passport")(passport)
 
 //Start Server
 var port = process.env.PORT ||5000;
-app.listen(port);
-
-
+app.listen(port)
 
 //connect to database
 mongoose.connect(db.mongoURI, {useUnifiedTopology:true, useNewUrlParser:true})
@@ -48,6 +46,7 @@ app.use(session({
     resave: true,
     saveUninitialized:true,
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -60,11 +59,9 @@ app.use(function(req,res,next){
     next();
 })
 
-
 //Routes
 app.get('/', (req,res)=>{
-    var somedata = "Hello World";
-    res.render("index",{somedata: "somedata"});
+    res.render("index");
 });
 
 app.get('/about', (req,res)=>{
@@ -80,3 +77,4 @@ app.use('/user',userRoutes);
 
 //Use static public folder
 app.use(express.static(path.join(__dirname,'public')));
+

@@ -86,30 +86,6 @@ router.post('/register', (req, res) => {
             })
     }
 
-
-    //         .then(user => {
-    //             if (user) {
-    //                 req.flash("error_msg", "Email already registerd");
-    //             }
-    //             else {
-    //                 const saltRounds = 10;
-    //                 bcrypt.genSalt(saltRounds, (err, salt) => {
-    //                     bcrypt.hash(newUser.password, salt, (err, hash) => {
-    //                         if (err) throw err;
-    //                         newUser.password = hash;
-    //                         new User(newUser).save()
-    //                             .then(user => {
-    //                                 req.flash("success_msg", "User Registerd");
-    //                                 res.redirect("login");
-    //                             })
-    //                             .catch(err=>console.log(err));
-    //                     });
-    //                 });
-    //             }
-    //         })
-    // }
-
-
 });
 
 
