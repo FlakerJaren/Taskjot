@@ -1,7 +1,7 @@
 {
-  "name": "vidjot",
+  "name": "taskjot",
   "version": "1.0.0",
-  "description": "App to create video ideas",
+  "description": "App to create tasks",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
